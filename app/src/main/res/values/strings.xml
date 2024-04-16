@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SignatureAdversarialDemo</string>
+    <string name="str_code_debug">b1f3ddc0517438c87c31bb7007f7d6bd</string>
+    <string name="str_code_release">b33f9ee1de4146c8b531cd74cce29ef2</string>
 </resources>

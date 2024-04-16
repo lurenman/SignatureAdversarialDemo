@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.signatureadversarialdemo.databinding.ActivityMainBinding;
+import com.example.signatureadversarialdemo.utils.DexDectionUtil;
 import com.example.signatureadversarialdemo.utils.SignDectionUtil;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 boolean result = SignDectionUtil.checkMd5(mContext);
                 Toast.makeText(mContext, "md5检测通过:" + result, Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.btnCrcCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean checkCRC = DexDectionUtil.checkCRC(mContext);
+                Toast.makeText(mContext, "Crc检测是否重打包:" + checkCRC, Toast.LENGTH_SHORT).show();
             }
         });
     }
